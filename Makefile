@@ -1,3 +1,3 @@
 run:
-	go build -o heartrate .
-	./heartrate
+	go build -o hartrate/hartrate github.com/pieterclaerhout/go-sports/hartrate
+	./hartrate/hartrate

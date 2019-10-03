@@ -1,4 +1,4 @@
-module github.com/pieterclaerhout/go-heartrate
+module github.com/pieterclaerhout/go-sports
 
 go 1.13
 
