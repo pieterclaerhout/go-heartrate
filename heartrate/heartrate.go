@@ -8,12 +8,14 @@ import (
 	"github.com/jedib0t/go-pretty/text"
 )
 
+// HRZone define a heart rate zone with a name, minimum and maximum percentage
 type HRZone struct {
-	MinPCT int
-	MaxPCT int
-	Name   string
+	MinPCT int    // The minimum percentage of the heart rate
+	MaxPCT int    // The maximum percentage of the heart rate
+	Name   string // The name of the zone
 }
 
+// ToHeartRate calculates the lower and upper heart rate for the zone
 func (hrZone *HRZone) ToHeartRate(rest int, max int) (int, int) {
 	lower := hrZone.calcHeartRate(hrZone.MinPCT, rest, max)
 	upper := hrZone.calcHeartRate(hrZone.MaxPCT, rest, max)
